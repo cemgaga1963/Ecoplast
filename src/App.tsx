@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Home, Info, Mail, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Home, Info, Mail } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
   const location = useLocation();
-  
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-green-700 text-white shadow-md">
@@ -84,8 +84,8 @@ function App() {
 
 function NavLink({ to, children, active }) {
   return (
-    <Link 
-      to={to} 
+    <Link
+      to={to}
       className={`flex items-center hover:text-green-200 transition-colors ${active ? 'font-semibold text-white' : 'text-green-100'}`}
     >
       {children}
@@ -104,7 +104,7 @@ function MobileMenu() {
 
   return (
     <div>
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center p-2 rounded text-green-100 hover:text-white hover:bg-green-800"
       >
